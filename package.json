@@ -1,0 +1,42 @@
+{
+  "name": "xiaohejs",
+  "version": "0.0.1",
+  "description": "🎈 小何同学的JavaScript工具箱",
+  "scripts": {
+    "clean": "rmdir /s /q dist",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "clean&build": "pnpm run clean && pnpm run build",
+    "release": "pnpm run clean&build && npm publish"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "@types/node": "^18.15.5",
+    "typescript": "^5.0.2"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "browserslist": [],
+  "homepage": "https://github.com/MyHdg0601/xiaohejs",
+  "bugs": "https://github.com/MyHdg0601/xiaohejs/issues",
+  "license": "MIT",
+  "author": {
+    "name": "小何同学 (MyHdg0601)",
+    "email": "HeDianGeng0601@outlook.com",
+    "url": "https://github.com/MyHdg0601"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MyHdg0601/xiaohejs.git"
+  },
+  "keywords": [
+    "typescript",
+    "xiaohe"
+  ]
+}

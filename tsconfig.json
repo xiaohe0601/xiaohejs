@@ -1,0 +1,23 @@
+//  https://www.tslang.cn/docs/handbook/compiler-options.html
+
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "module": "ES6",
+    "outDir": "dist/esm",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ]
+  },
+  "include": [
+    "lib/**/*.ts",
+    "lib/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
