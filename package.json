@@ -1,12 +1,13 @@
 {
   "name": "xiaohejs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
-    "clean": "rmdir /s /q dist",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "clean&build": "pnpm run clean && pnpm run build",
-    "release": "pnpm run clean&build && npm publish"
+    "clean": "rmdir /s /q dist",
+    "build@clean": "pnpm run clean && pnpm run build",
+    "release": "pnpm run build && npm publish",
+    "release@clean": "pnpm run build@clean && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",

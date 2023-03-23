@@ -72,8 +72,8 @@ export default class StringUtils {
    * 下划线风格转驼峰风格字符串
    *
    * @since 0.0.1
-   * @param [str]             下划线风格字符串
-   * @returns {string|null}   驼峰风格字符串
+   * @param [str]               下划线风格字符串
+   * @returns {string | null}   驼峰风格字符串
    */
   public static underline2hump(str?: string) {
     if (str == null) {
@@ -89,8 +89,8 @@ export default class StringUtils {
    * 驼峰风格转下划线风格字符串
    *
    * @since 0.0.1
-   * @param [str]             驼峰风格字符串
-   * @returns {string|null}   下划线风格字符串
+   * @param [str]               驼峰风格字符串
+   * @returns {string | null}   下划线风格字符串
    */
   public static hump2underline(str?: string) {
     if (str == null) {
@@ -102,6 +102,11 @@ export default class StringUtils {
 
 }
 
+/**
+ * 分割字符串配置项
+ *
+ * @since   0.0.1
+ */
 export interface IStringUtilsSplitOptions {
   /**
    * 是否移除开头的分隔符
