@@ -10,7 +10,7 @@ export declare class ArrayUtils {
      *
      * @since 0.0.4
      */
-    static DefaultFlat2TreeOptions: IArrayUtilsFlat2TreeOptions<any>;
+    static readonly DefaultFlat2TreeOptions: IArrayUtilsFlat2TreeOptions<any>;
     /**
      * 扁平数组转树形结构数组
      *
@@ -31,7 +31,7 @@ export declare class ArrayUtils {
      *
      * @since 0.0.4
      */
-    static DefaultTree2FlatOptions: IArrayUtilsTree2FlatOptions<any>;
+    static readonly DefaultTree2FlatOptions: IArrayUtilsTree2FlatOptions<any>;
     /**
      * 树形结构数组转扁平数组
      *
@@ -51,7 +51,7 @@ export declare class ArrayUtils {
      *
      * @since 0.0.4
      */
-    static DefaultRecursiveTraversalOptions: IArrayUtilsRecursiveTraversalOptions<any>;
+    static readonly DefaultRecursiveTraversalOptions: IArrayUtilsRecursiveTraversalOptions<any>;
     /**
      * 递归遍历树形结构数组
      *
@@ -75,17 +75,17 @@ export interface IArrayUtilsFlat2TreeOptions<T> {
     /**
      * 节点唯一标识属性名
      */
-    key?: string;
+    readonly key?: string;
     /**
      * 父节点唯一标识属性名
      */
-    parentKey?: string;
+    readonly parentKey?: string;
     /**
      * 节点数据处理器
      *
      * @param item    当前节点
      */
-    processor?: (item: T) => T;
+    readonly processor?: (item: T) => T;
 }
 /**
  * 树形结构数组转扁平数组-配置项
@@ -96,13 +96,13 @@ export interface IArrayUtilsTree2FlatOptions<T> {
     /**
      * 子节点集合属性名
      */
-    childrenKey?: string;
+    readonly childrenKey?: string;
     /**
      * 节点数据处理器
      *
      * @param item    当前节点
      */
-    processor?: (item: T) => T;
+    readonly processor?: (item: T) => T;
 }
 /**
  * 递归遍历树形结构数组-配置项
@@ -113,16 +113,16 @@ export interface IArrayUtilsRecursiveTraversalOptions<T> {
     /**
      * 子节点集合属性名
      */
-    childrenKey?: string;
+    readonly childrenKey?: string;
     /**
      * 父节点数据
      */
-    parent?: T;
+    readonly parent?: T;
     /**
      * 节点数据处理器
      *
      * @param item      当前节点
      * @param parent    当前节点的父节点
      */
-    processor?: (item: T, parent: T) => void;
+    readonly processor?: (item: T, parent: T) => void;
 }

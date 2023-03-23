@@ -14,7 +14,7 @@ export class StringUtils {
    * @param [trim=false]    是否String#trim()
    * @returns {boolean}     是否为空字符串
    */
-  public static isEmpty(str?: string, trim = false) {
+  public static isEmpty(str?: string, trim = false): boolean {
     return str == null || (trim ? str.trim() : str).length <= 0;
   };
 
@@ -26,7 +26,7 @@ export class StringUtils {
    * @param [trim=false]    是否String#trim()
    * @returns {boolean}     是否为非空字符串
    */
-  public static isNotEmpty(str?: string, trim = false) {
+  public static isNotEmpty(str?: string, trim = false): boolean {
     return !StringUtils.isEmpty(str, trim);
   };
 
@@ -35,7 +35,7 @@ export class StringUtils {
    *
    * @since 0.0.1
    */
-  public static DefaultStringUtilsSplitOptions: IStringUtilsSplitOptions = {
+  public static readonly DefaultStringUtilsSplitOptions: IStringUtilsSplitOptions = {
     removeLeadingSeparator: true,
     removeTrailingSeparator: true
   };
@@ -51,7 +51,7 @@ export class StringUtils {
    * @param [options.removeTrailingSeparator=true]    是否移除结尾的分隔符
    * @returns {string[]}                              字符串分割结果数组
    */
-  public static split(str?: string, separator = ",", options?: IStringUtilsSplitOptions) {
+  public static split(str?: string, separator = ",", options?: IStringUtilsSplitOptions): string[] {
     const { removeLeadingSeparator, removeTrailingSeparator } = Object.assign({}, StringUtils.DefaultStringUtilsSplitOptions, options);
 
     if (str == null || str.length <= 0) {
@@ -75,7 +75,7 @@ export class StringUtils {
    * @param [str]               下划线风格字符串
    * @returns {string | null}   驼峰风格字符串
    */
-  public static underline2hump(str?: string) {
+  public static underline2hump(str?: string): string | null {
     if (str == null) {
       return null;
     }
@@ -92,7 +92,7 @@ export class StringUtils {
    * @param [str]               驼峰风格字符串
    * @returns {string | null}   下划线风格字符串
    */
-  public static hump2underline(str?: string) {
+  public static hump2underline(str?: string): string | null {
     if (str == null) {
       return null;
     }
@@ -107,7 +107,7 @@ export class StringUtils {
    * @param num           阿拉伯数字
    * @returns {string}    中文数字
    */
-  public static number2chinese(num: number) {
+  public static number2chinese(num: number): string {
     const units = ["十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千"];
 
     const str = String(num);
@@ -144,9 +144,9 @@ export interface IStringUtilsSplitOptions {
   /**
    * 是否移除开头的分隔符
    */
-  removeLeadingSeparator?: boolean;
+  readonly removeLeadingSeparator?: boolean;
   /**
    * 是否移除结尾的分隔符
    */
-  removeTrailingSeparator?: boolean;
+  readonly removeTrailingSeparator?: boolean;
 }

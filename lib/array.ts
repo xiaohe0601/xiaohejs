@@ -11,7 +11,7 @@ export class ArrayUtils {
    *
    * @since 0.0.4
    */
-  public static DefaultFlat2TreeOptions: IArrayUtilsFlat2TreeOptions<any> = {
+  public static readonly DefaultFlat2TreeOptions: IArrayUtilsFlat2TreeOptions<any> = {
     key: "id",
     parentKey: "pid",
     processor: (item) => (item)
@@ -29,7 +29,7 @@ export class ArrayUtils {
    * @param [options.processor=(item)=>(item)]    节点数据处理器
    * @returns {T[]}                               树形结构数组
    */
-  public static flat2tree<T extends { [children: string]: any }>(array?: T[], options?: IArrayUtilsFlat2TreeOptions<T>) {
+  public static flat2tree<T extends { [children: string]: any }>(array?: T[], options?: IArrayUtilsFlat2TreeOptions<T>): T[] {
     const { key, parentKey, processor } = Object.assign({}, ArrayUtils.DefaultFlat2TreeOptions, options);
 
     if (array == null || key == null || parentKey == null || processor == null) {
@@ -66,7 +66,7 @@ export class ArrayUtils {
    *
    * @since 0.0.4
    */
-  public static DefaultTree2FlatOptions: IArrayUtilsTree2FlatOptions<any> = {
+  public static readonly DefaultTree2FlatOptions: IArrayUtilsTree2FlatOptions<any> = {
     childrenKey: "children",
     processor: (item) => (item)
   };
@@ -82,7 +82,7 @@ export class ArrayUtils {
    * @param [options.processor=(item)=>(item)]    节点数据处理器
    * @returns {T[]}                               扁平数组
    */
-  public static tree2flat<T extends { [children: string]: T[] | any }>(array?: T[], options?: IArrayUtilsTree2FlatOptions<T>) {
+  public static tree2flat<T extends { [children: string]: T[] | any }>(array?: T[], options?: IArrayUtilsTree2FlatOptions<T>): T[] {
     const { childrenKey, processor } = Object.assign({}, ArrayUtils.DefaultTree2FlatOptions, options);
 
     if (array == null || childrenKey == null || processor == null) {
@@ -105,7 +105,7 @@ export class ArrayUtils {
    *
    * @since 0.0.4
    */
-  public static DefaultRecursiveTraversalOptions: IArrayUtilsRecursiveTraversalOptions<any> = {
+  public static readonly DefaultRecursiveTraversalOptions: IArrayUtilsRecursiveTraversalOptions<any> = {
     childrenKey: "children"
   };
 
@@ -119,7 +119,7 @@ export class ArrayUtils {
    * @param [options.parent]                    父节点数据
    * @param [options.processor]                 节点数据处理器
    */
-  public static recursiveTraversal<T extends { [children: string]: T[] | any }>(array?: T[], options?: IArrayUtilsRecursiveTraversalOptions<T>) {
+  public static recursiveTraversal<T extends { [children: string]: T[] | any }>(array?: T[], options?: IArrayUtilsRecursiveTraversalOptions<T>): void {
     const { childrenKey, processor } = Object.assign({}, ArrayUtils.DefaultRecursiveTraversalOptions, options);
 
     if (array == null || childrenKey == null) {
@@ -147,17 +147,17 @@ export interface IArrayUtilsFlat2TreeOptions<T> {
   /**
    * 节点唯一标识属性名
    */
-  key?: string;
+  readonly key?: string;
   /**
    * 父节点唯一标识属性名
    */
-  parentKey?: string;
+  readonly parentKey?: string;
   /**
    * 节点数据处理器
    *
    * @param item    当前节点
    */
-  processor?: (item: T) => T;
+  readonly processor?: (item: T) => T;
 }
 
 /**
@@ -169,13 +169,13 @@ export interface IArrayUtilsTree2FlatOptions<T> {
   /**
    * 子节点集合属性名
    */
-  childrenKey?: string;
+  readonly childrenKey?: string;
   /**
    * 节点数据处理器
    *
    * @param item    当前节点
    */
-  processor?: (item: T) => T;
+  readonly processor?: (item: T) => T;
 }
 
 /**
@@ -187,16 +187,16 @@ export interface IArrayUtilsRecursiveTraversalOptions<T> {
   /**
    * 子节点集合属性名
    */
-  childrenKey?: string;
+  readonly childrenKey?: string;
   /**
    * 父节点数据
    */
-  parent?: T;
+  readonly parent?: T;
   /**
    * 节点数据处理器
    *
    * @param item      当前节点
    * @param parent    当前节点的父节点
    */
-  processor?: (item: T, parent: T) => void;
+  readonly processor?: (item: T, parent: T) => void;
 }

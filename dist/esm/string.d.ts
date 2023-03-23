@@ -28,7 +28,7 @@ export declare class StringUtils {
      *
      * @since 0.0.1
      */
-    static DefaultStringUtilsSplitOptions: IStringUtilsSplitOptions;
+    static readonly DefaultStringUtilsSplitOptions: IStringUtilsSplitOptions;
     /**
      * 分割字符串
      *
@@ -75,9 +75,9 @@ export interface IStringUtilsSplitOptions {
     /**
      * 是否移除开头的分隔符
      */
-    removeLeadingSeparator?: boolean;
+    readonly removeLeadingSeparator?: boolean;
     /**
      * 是否移除结尾的分隔符
      */
-    removeTrailingSeparator?: boolean;
+    readonly removeTrailingSeparator?: boolean;
 }
