@@ -1,2 +1,3 @@
-export { default as StringUtils } from "./string";
+export * from "./string";
+export * from "./array";
 //# sourceMappingURL=index.js.map

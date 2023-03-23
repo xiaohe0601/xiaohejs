@@ -1,1 +1,2 @@
-export { default as StringUtils, IStringUtilsSplitOptions } from "./string";
+export * from "./string";
+export * from "./array";
