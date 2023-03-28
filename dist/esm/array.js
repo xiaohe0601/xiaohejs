@@ -79,10 +79,10 @@ export var ArrayUtils = /** @class */ (function () {
         }
         return array.reduce(function (previous, _a) {
             var _b = childrenKey, children = _a[_b], others = __rest(_a, [typeof _b === "symbol" ? _b : _b + ""]);
+            previous.push(processor(others));
             if (children && children.length > 0) {
                 previous.push.apply(previous, ArrayUtils.tree2flat(children, options));
             }
-            previous.push(processor(others));
             return previous;
         }, []);
     };
@@ -105,11 +105,11 @@ export var ArrayUtils = /** @class */ (function () {
         }
         for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
             var item = array_1[_i];
+            processor && processor(item, options === null || options === void 0 ? void 0 : options.parent);
             var children = item[childrenKey];
             if (children && children.length > 0) {
                 ArrayUtils.recursiveTraversal(children, Object.assign({}, options, { parent: item }));
             }
-            processor && processor(item, options === null || options === void 0 ? void 0 : options.parent);
         }
     };
     ;

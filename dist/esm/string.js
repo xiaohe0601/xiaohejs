@@ -47,7 +47,7 @@ export var StringUtils = /** @class */ (function () {
     StringUtils.split = function (str, separator, options) {
         var _a;
         if (separator === void 0) { separator = ","; }
-        var removeLeadingSeparator = (_a = Object.assign({}, StringUtils.DefaultStringUtilsSplitOptions, options), _a.removeLeadingSeparator), removeTrailingSeparator = _a.removeTrailingSeparator;
+        var removeLeadingSeparator = (_a = Object.assign({}, StringUtils.DefaultSplitOptions, options), _a.removeLeadingSeparator), removeTrailingSeparator = _a.removeTrailingSeparator;
         if (str == null || str.length <= 0) {
             return [];
         }
@@ -87,7 +87,8 @@ export var StringUtils = /** @class */ (function () {
         if (str == null) {
             return null;
         }
-        return str.replace(/([A-Z])/g, "_$1").toLowerCase();
+        return str.replace(/([A-Z])/g, "_$1")
+            .toLowerCase();
     };
     ;
     /**
@@ -118,13 +119,132 @@ export var StringUtils = /** @class */ (function () {
     };
     ;
     /**
+     * 转换Url相对路径
+     *
+     * @since 0.0.6
+     * @param [value]                                     Url地址
+     * @param [options]                                   配置项
+     * @param [options.base=StringUtils.ConvertUrlBase]   Url基地址
+     * @param [options.prefix]                            Url额外前缀
+     * @returns {string | null | undefined}               转换后的Url地址
+     */
+    StringUtils.convertUrl = function (value, options) {
+        var _a, _b;
+        var base = (_a = Object.assign({}, StringUtils.DefaultConvertUrlOptions, options), _b = _a.base, _b === void 0 ? StringUtils.ConvertUrlBase : _b), prefix = _a.prefix;
+        if (value == null || value.length <= 0 || StringUtils.ConvertUrlStartsExcludes.findIndex(function (it) { return value.startsWith(it); }) >= 0 || base == null || value.startsWith(base)) {
+            return value;
+        }
+        return "".concat(prefix != null ? prefix : "").concat(base).concat(value.startsWith("/") ? "" : "/").concat(value);
+    };
+    ;
+    /**
+     * 生成uuid (若未指定长度会生成rfc4122标准的uuid，否则只是生成随机字符串)
+     *
+     * @since 0.0.6
+     * @param [length]                                                                                生成uuid的长度
+     * @param [options]                                                                               配置项
+     * @param [options.radix]                                                                         生成uuid的基数
+     * @param [options.characters="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"]   参与生成uuid的字符
+     * @returns {string}                                                                              生成的uuid
+     */
+    StringUtils.uuid = function (length, options) {
+        var _a;
+        var radix = (_a = Object.assign({}, StringUtils.DefaultUuidOptions, options), _a.radix), characters = _a.characters;
+        if (characters == null) {
+            return "";
+        }
+        var chars = characters.split("");
+        var uuid = [];
+        if (length != null) {
+            var radi = (radix == null || radix <= 0) ? chars.length : radix;
+            for (var i = 0; i < length; i += 1) {
+                uuid[i] = chars[0 | Math.random() * radi];
+            }
+        }
+        else {
+            uuid[8] = uuid[13] = uuid[18] = uuid[23] = "-";
+            uuid[14] = "4";
+            for (var i = 0; i < 36; i += 1) {
+                if (uuid[i] == null) {
+                    var r = 0 | Math.random() * 16;
+                    uuid[i] = chars[(i === 19) ? (r & 0x3) | 0x8 : r];
+                }
+            }
+        }
+        return uuid.join("");
+    };
+    ;
+    /**
+     * 格式化文件大小
+     *
+     * @since 0.0.6
+     * @param [bit=0]                     文件大小(单位: b)
+     * @param [options]                   配置项
+     * @param [options.lowercase=true]    单位是否小写
+     * @param [options.digits]            小数位数
+     * @returns {string}                  格式化结果
+     */
+    StringUtils.formatFileSize = function (bit, options) {
+        var _a;
+        if (bit === void 0) { bit = 0; }
+        var lowercase = (_a = Object.assign({}, StringUtils.DefaultFormatFileSizeOptions, options), _a.lowercase), digits = _a.digits;
+        var units = (lowercase !== null && lowercase !== void 0 ? lowercase : StringUtils.DefaultFormatFileSizeOptions.lowercase) ? ["b", "kb", "mb", "gb", "tb", "pb", "eb", "zb", "yb"] : ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+        var bits = Number(bit);
+        var index = Math.floor(Math.log(bits) / Math.log(1024));
+        var size = bits / Math.pow(1024, index);
+        if (digits != null) {
+            return "".concat(size.toFixed(digits)).concat(units[index]);
+        }
+        return "".concat(size).concat(units[index]);
+    };
+    ;
+    /**
      * 分割字符串-默认配置项
      *
      * @since 0.0.1
      */
-    StringUtils.DefaultStringUtilsSplitOptions = {
+    StringUtils.DefaultSplitOptions = {
         removeLeadingSeparator: true,
         removeTrailingSeparator: true
+    };
+    /**
+     * 转换Url相对路径-默认Url基地址
+     *
+     * @since 0.0.6
+     */
+    StringUtils.ConvertUrlBase = "";
+    /**
+     * 转换Url相对路径-例外的Url前缀
+     *
+     * @since 0.0.6
+     */
+    StringUtils.ConvertUrlStartsExcludes = ["http", "ws", "udp", "tcp"];
+    /**
+     * 转换Url相对路径-默认配置项
+     *
+     * @since 0.0.6
+     */
+    StringUtils.DefaultConvertUrlOptions = {
+        base: "",
+        prefix: null
+    };
+    /**
+     * 生成uuid-默认配置项
+     *
+     * @since 0.0.6
+     */
+    StringUtils.DefaultUuidOptions = {
+        radix: -1,
+        characters: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    };
+    /**
+     * 格式化文件大小-默认配置项
+     *
+     * @since 0.0.6
+     */
+    StringUtils.DefaultFormatFileSizeOptions = {
+        lowercase: true,
+        digits: null
     };
     return StringUtils;
 }());

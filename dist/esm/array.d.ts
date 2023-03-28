@@ -25,7 +25,7 @@ export declare class ArrayUtils {
      */
     static flat2tree<T extends {
         [children: string]: any;
-    }>(array?: T[], options?: IArrayUtilsFlat2TreeOptions<T>): T[];
+    }>(array?: T[] | null, options?: IArrayUtilsFlat2TreeOptions<T> | null): T[];
     /**
      * 树形结构数组转扁平数组-默认配置项
      *
@@ -45,7 +45,7 @@ export declare class ArrayUtils {
      */
     static tree2flat<T extends {
         [children: string]: T[] | any;
-    }>(array?: T[], options?: IArrayUtilsTree2FlatOptions<T>): T[];
+    }>(array?: T[] | null, options?: IArrayUtilsTree2FlatOptions<T> | null): T[];
     /**
      * 递归遍历树形结构数组-默认配置项
      *
@@ -64,7 +64,7 @@ export declare class ArrayUtils {
      */
     static recursiveTraversal<T extends {
         [children: string]: T[] | any;
-    }>(array?: T[], options?: IArrayUtilsRecursiveTraversalOptions<T>): void;
+    }>(array?: T[] | null, options?: IArrayUtilsRecursiveTraversalOptions<T> | null): void;
 }
 /**
  * 扁平数组转树形结构数组-配置项
@@ -75,17 +75,17 @@ export interface IArrayUtilsFlat2TreeOptions<T> {
     /**
      * 节点唯一标识属性名
      */
-    readonly key?: string;
+    readonly key?: string | null;
     /**
      * 父节点唯一标识属性名
      */
-    readonly parentKey?: string;
+    readonly parentKey?: string | null;
     /**
      * 节点数据处理器
      *
      * @param item    当前节点
      */
-    readonly processor?: (item: T) => T;
+    readonly processor?: ((item: T) => T) | null;
 }
 /**
  * 树形结构数组转扁平数组-配置项
@@ -96,13 +96,13 @@ export interface IArrayUtilsTree2FlatOptions<T> {
     /**
      * 子节点集合属性名
      */
-    readonly childrenKey?: string;
+    readonly childrenKey?: string | null;
     /**
      * 节点数据处理器
      *
      * @param item    当前节点
      */
-    readonly processor?: (item: T) => T;
+    readonly processor?: ((item: T) => T) | null;
 }
 /**
  * 递归遍历树形结构数组-配置项
@@ -113,16 +113,16 @@ export interface IArrayUtilsRecursiveTraversalOptions<T> {
     /**
      * 子节点集合属性名
      */
-    readonly childrenKey?: string;
+    readonly childrenKey?: string | null;
     /**
      * 父节点数据
      */
-    readonly parent?: T;
+    readonly parent?: T | null;
     /**
      * 节点数据处理器
      *
      * @param item      当前节点
      * @param parent    当前节点的父节点
      */
-    readonly processor?: (item: T, parent: T) => void;
+    readonly processor?: ((item: T, parent?: T | null) => void) | null;
 }

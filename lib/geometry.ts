@@ -222,7 +222,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    亩
    */
-  public static sm2mu(sm: number, fixed?: number): number {
+  public static sm2mu(sm: number, fixed?: number | null): number {
     return GeometryUtils.decimal(sm * 0.0015);
   };
 
@@ -234,7 +234,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    平方米
    */
-  public static mu2sm(mu: number, fixed?: number): number {
+  public static mu2sm(mu: number, fixed?: number | null): number {
     return GeometryUtils.decimal(mu / 0.0015);
   };
 
@@ -246,7 +246,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    公顷
    */
-  public static sm2ha(sm: number, fixed?: number): number {
+  public static sm2ha(sm: number, fixed?: number | null): number {
     return GeometryUtils.decimal(sm * 0.0001);
   };
 
@@ -258,7 +258,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    平方米
    */
-  public static ha2sm(ha: number, fixed?: number): number {
+  public static ha2sm(ha: number, fixed?: number | null): number {
     return GeometryUtils.decimal(ha * 10000);
   };
 
@@ -270,7 +270,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    公顷
    */
-  public static mu2ha(mu: number, fixed?: number): number {
+  public static mu2ha(mu: number, fixed?: number | null): number {
     return GeometryUtils.decimal(mu / 15);
   };
 
@@ -282,7 +282,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    亩
    */
-  public static ha2mu(ha: number, fixed?: number): number {
+  public static ha2mu(ha: number, fixed?: number | null): number {
     return GeometryUtils.decimal(ha * 15);
   };
 
@@ -294,7 +294,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    转换结果
    */
-  public static decimal(num: number, fixed?: number): number {
+  public static decimal(num: number, fixed?: number | null): number {
     return (fixed == null || fixed < 0) ? num : Number(num.toFixed(fixed));
   };
 

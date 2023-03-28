@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",

@@ -110,7 +110,7 @@ export declare class GeometryUtils {
      * @param [fixed]       最大小数位数
      * @returns {number}    亩
      */
-    static sm2mu(sm: number, fixed?: number): number;
+    static sm2mu(sm: number, fixed?: number | null): number;
     /**
      * 亩转平方米
      *
@@ -119,7 +119,7 @@ export declare class GeometryUtils {
      * @param [fixed]       最大小数位数
      * @returns {number}    平方米
      */
-    static mu2sm(mu: number, fixed?: number): number;
+    static mu2sm(mu: number, fixed?: number | null): number;
     /**
      * 平方米转公顷
      *
@@ -128,7 +128,7 @@ export declare class GeometryUtils {
      * @param [fixed]       最大小数位数
      * @returns {number}    公顷
      */
-    static sm2ha(sm: number, fixed?: number): number;
+    static sm2ha(sm: number, fixed?: number | null): number;
     /**
      * 公顷转平方米
      *
@@ -137,7 +137,7 @@ export declare class GeometryUtils {
      * @param [fixed]       最大小数位数
      * @returns {number}    平方米
      */
-    static ha2sm(ha: number, fixed?: number): number;
+    static ha2sm(ha: number, fixed?: number | null): number;
     /**
      * 亩转公顷
      *
@@ -146,7 +146,7 @@ export declare class GeometryUtils {
      * @param [fixed]       最大小数位数
      * @returns {number}    公顷
      */
-    static mu2ha(mu: number, fixed?: number): number;
+    static mu2ha(mu: number, fixed?: number | null): number;
     /**
      * 公顷转亩
      *
@@ -155,7 +155,7 @@ export declare class GeometryUtils {
      * @param [fixed]       最大小数位数
      * @returns {number}    亩
      */
-    static ha2mu(ha: number, fixed?: number): number;
+    static ha2mu(ha: number, fixed?: number | null): number;
     /**
      * 转换小数位数
      *
@@ -164,7 +164,7 @@ export declare class GeometryUtils {
      * @param [fixed]       最大小数位数
      * @returns {number}    转换结果
      */
-    static decimal(num: number, fixed?: number): number;
+    static decimal(num: number, fixed?: number | null): number;
 }
 /**
  * 对象型经纬度坐标点
