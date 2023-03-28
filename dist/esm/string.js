@@ -225,7 +225,7 @@ export var StringUtils = /** @class */ (function () {
      * @since 0.0.6
      */
     StringUtils.DefaultConvertUrlOptions = {
-        base: "",
+        base: undefined,
         prefix: null
     };
     /**

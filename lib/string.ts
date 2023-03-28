@@ -154,7 +154,7 @@ export class StringUtils {
    * @since 0.0.6
    */
   public static readonly DefaultConvertUrlOptions: IStringUtilsConvertUrlOptions = {
-    base: "",
+    base: undefined,
     prefix: null
   };
 
