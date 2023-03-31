@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "start": "webpack serve",
@@ -27,7 +27,7 @@
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "files": [
-    "./dist/**/*"
+    "dist/**/*"
   ],
   "sideEffects": false,
   "browserslist": [
