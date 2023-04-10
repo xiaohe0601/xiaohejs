@@ -2,3 +2,57 @@
   <h1>xiaohejs</h1>
   <span>🎈 小何同学的JavaScript工具箱</span>
 </div>
+
+<br>
+
+![GitHub stars](https://img.shields.io/github/stars/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub watchers](https://img.shields.io/github/watchers/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub release](https://img.shields.io/github/v/release/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub license](https://img.shields.io/github/license/MyHdg0601/xiaohejs?style=flat-square)
+
+小何同学 / [github@MyHdg0601](https://github.com/MyHdg0601) / [gitee@MyHdg](https://gitee.com/MyHdg)
+
+### 🎉 特性
+
+- 🍔 代码高质量，严谨规范
+
+- 🍚 代码严谨规范，结构清晰
+
+- 🍖 单元测试覆盖率100%
+
+- 🍜 完全使用TypeScript构建
+
+- 🍙 轻松提高开发效率
+
+- 🍟 基于最佳实践构建的JS工具箱
+
+- 🧀 所有方法均提供JsDoc
+
+- 🍳 无任何费用，支持免费商用
+
+- 🥗 更多特性等你发掘……
+
+### 🛩️ 在线文档
+
+- [文档首页](https://myhdg0601.github.io/xiaohejs-document)
+
+- 文档首页(国内镜像)：暂未开通
+
+- [快速上手](https://myhdg0601.github.io/xiaohejs-document/guide/getting-started.html)
+
+- [工具列表](https://myhdg0601.github.io/xiaohejs-document/utils)
+
+- [小何同学](https://myhdg0601.github.io/xiaohejs-document/about/xiaohe.html)
+
+### 🐶 讨论交流
+
+- ❓：若有疑问或BUG反馈，可提交[issues](https://github.com/MyHdg0601/xiaohejs/issues)
+
+- 📫：[HeDianGeng0601@outlook.com](mailto:HeDianGeng0601@outlook.com)
+
+- 🐧：暂未开通
+
+### 🏆 开源协议
+
+- MIT [LICENSE](./LICENSE)
