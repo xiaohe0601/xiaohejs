@@ -35,15 +35,15 @@
 
 ### 🛩️ 在线文档
 
-- [文档首页](https://myhdg0601.github.io/xiaohejs-document)
+- [文档首页](https://xiaohejs.myhdg.top)
 
 - 文档首页(国内镜像)：暂未开通
 
-- [快速上手](https://myhdg0601.github.io/xiaohejs-document/guide/getting-started.html)
+- [快速上手](https://xiaohejs.myhdg.top/guide/getting-started.html)
 
-- [工具列表](https://myhdg0601.github.io/xiaohejs-document/utils)
+- [工具列表](https://xiaohejs.myhdg.top/utils)
 
-- [小何同学](https://myhdg0601.github.io/xiaohejs-document/about/xiaohe.html)
+- [小何同学](https://xiaohejs.myhdg.top/about/xiaohe.html)
 
 ### 🐶 讨论交流
 
