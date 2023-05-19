@@ -5,13 +5,13 @@
 
 <br>
 
-![GitHub stars](https://img.shields.io/github/stars/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
-![GitHub watchers](https://img.shields.io/github/watchers/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
-![GitHub release](https://img.shields.io/github/v/release/MyHdg0601/xiaohejs?logo=GitHub&style=flat-square)
-![GitHub license](https://img.shields.io/github/license/MyHdg0601/xiaohejs?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/xiaohe0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/xiaohe0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub watchers](https://img.shields.io/github/watchers/xiaohe0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub release](https://img.shields.io/github/v/release/xiaohe0601/xiaohejs?logo=GitHub&style=flat-square)
+![GitHub license](https://img.shields.io/github/license/xiaohe0601/xiaohejs?style=flat-square)
 
-小何同学 / [github@MyHdg0601](https://github.com/MyHdg0601) / [gitee@MyHdg](https://gitee.com/MyHdg)
+小何同学 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
 
 ### 🎉 特性
 
@@ -47,7 +47,7 @@
 
 ### 🐶 讨论交流
 
-- ❓：若有疑问或BUG反馈，可提交[issues](https://github.com/MyHdg0601/xiaohejs/issues)
+- ❓：若有疑问或BUG反馈，可提交[issues](https://github.com/xiaohe0601/xiaohejs/issues)
 
 - 📫：[HeDianGeng0601@outlook.com](mailto:HeDianGeng0601@outlook.com)
 

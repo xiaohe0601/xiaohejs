@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "start": "webpack serve",
@@ -35,17 +35,17 @@
     "last 2 versions",
     "not dead"
   ],
-  "homepage": "https://github.com/MyHdg0601/xiaohejs",
-  "bugs": "https://github.com/MyHdg0601/xiaohejs/issues",
+  "homepage": "https://xiaohejs.myhdg.top",
+  "bugs": "https://github.com/xiaohe0601/xiaohejs/issues",
   "license": "MIT",
   "author": {
-    "name": "小何同学 (MyHdg0601)",
+    "name": "小何同学 (xiaohe0601)",
     "email": "HeDianGeng0601@outlook.com",
-    "url": "https://github.com/MyHdg0601"
+    "url": "https://github.com/xiaohe0601"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MyHdg0601/xiaohejs.git"
+    "url": "https://github.com/xiaohe0601/xiaohejs.git"
   },
   "keywords": [
     "typescript",
