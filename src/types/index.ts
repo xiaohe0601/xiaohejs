@@ -1,5 +1,5 @@
 export * from "./common";
 
-export * from "./flat2tree";
-export * from "./tree2flat";
-export * from "./recursiveTraversal";
+export * from "./array/flat2tree";
+export * from "./array/tree2flat";
+export * from "./array/recursiveTraversal";
