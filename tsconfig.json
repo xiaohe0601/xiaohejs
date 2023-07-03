@@ -4,14 +4,15 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "ESNext",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,
-    "outDir": "./dist/esm",
-    "declarationDir": "./dist/esm",
+    "outDir": "./lib/esm",
+    "declarationDir": "./lib/esm",
     "lib": [
       "ESNext",
       "DOM"
@@ -23,8 +24,8 @@
     }
   },
   "include": [
-    "./lib/**/*.ts",
-    "./lib/**/*.d.ts"
+    "./src/**/*.ts",
+    "./src/**/*.d.ts"
   ],
   "exclude": [
     "node_modules"

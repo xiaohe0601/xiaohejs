@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "start": "webpack serve",
@@ -23,11 +23,11 @@
     "webpack-cli": "^5.0.1",
     "webpack-merge": "^5.8.0"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "files": [
-    "dist/**/*"
+    "lib/**/*"
   ],
   "sideEffects": false,
   "browserslist": [

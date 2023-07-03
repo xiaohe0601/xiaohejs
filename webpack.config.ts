@@ -16,7 +16,7 @@ const CommonConfig: webpack.Configuration = {
   resolve: {
     extensions: [".ts"]
   },
-  entry: "./lib/index.ts",
+  entry: "./src/index.ts",
   output: {
     filename: "index.js",
     clean: true
@@ -25,7 +25,7 @@ const CommonConfig: webpack.Configuration = {
 
 const CjsConfig = merge(CommonConfig, {
   output: {
-    path: path.resolve(__dirname, "dist/cjs"),
+    path: path.resolve(__dirname, "lib/cjs"),
     library: {
       name: "xiaohejs",
       type: "umd"
@@ -36,7 +36,7 @@ const CjsConfig = merge(CommonConfig, {
 const EsmConfig = merge(CommonConfig, {
   output: {
     module: true,
-    path: path.resolve(__dirname, "dist/esm"),
+    path: path.resolve(__dirname, "lib/esm"),
     library: {
       type: "module"
     }

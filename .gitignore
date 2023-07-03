@@ -16,6 +16,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Dists
+lib
 dist
 node_modules
 
