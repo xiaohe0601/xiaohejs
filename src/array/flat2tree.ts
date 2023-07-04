@@ -1,4 +1,5 @@
-import { IFlat2TreeOptions, IObjectMap, IObjectRecord } from "../types";
+import { IObjectMap, IObjectRecord } from "../types/common";
+import { IFlat2TreeOptions } from "../types/array";
 
 /**
  * 扁平数组转树形结构数组-默认配置项

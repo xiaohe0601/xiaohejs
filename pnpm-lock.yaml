@@ -37,6 +37,9 @@ devDependencies:
   webpack-merge:
     specifier: ^5.8.0
     version: 5.8.0
+  xiaohejs:
+    specifier: ^0.0.10
+    version: 0.0.10
 
 packages:
 
@@ -2477,6 +2480,10 @@ packages:
 
   /wildcard@2.0.0:
     resolution: {integrity: sha512-JcKqAHLPxcdb9KM49dufGXn2x3ssnfjbcaQdLlfZsL9rH9wgDQjUtDxbo8NE0F6SFvydeu1VhZe7hZuHsB2/pw==}
+    dev: true
+
+  /xiaohejs@0.0.10:
+    resolution: {integrity: sha512-L+IDFbaby5UsB7XpAY72XNo8Q81O+9UFhZqQPSK1j8+aPjpCWHsfSN297IETNALdayq/8b2g12EX57aK1fQF+A==}
     dev: true
 
   /yallist@3.1.1:

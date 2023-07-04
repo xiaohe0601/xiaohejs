@@ -1,3 +1,5 @@
+import { LngLatArray, LngLatLike } from "../types/geometry";
+
 /**
  * 几何计算工具类
  *
@@ -46,9 +48,9 @@ export class GeometryUtils {
    *
    * @since 0.0.5
    * @param point                           联合型坐标点
-   * @returns {TGeometryUtilsLngLatArray}   数组型坐标点
+   * @returns {LngLatArray}   数组型坐标点
    */
-  public static point2array(point: TGeometryUtilsLngLatLike): TGeometryUtilsLngLatArray {
+  public static point2array(point: LngLatLike): LngLatArray {
     if (Array.isArray(point)) {
       return point;
     }
@@ -60,10 +62,10 @@ export class GeometryUtils {
    * 联合型坐标点集合转数组型坐标点集合
    *
    * @since 0.0.5
-   * @param points                            联合型坐标点集合
-   * @returns {TGeometryUtilsLngLatArray[]}   数组型坐标点集合
+   * @param points              联合型坐标点集合
+   * @returns {LngLatArray[]}   数组型坐标点集合
    */
-  public static points2array(points: TGeometryUtilsLngLatLike[]): TGeometryUtilsLngLatArray[] {
+  public static points2array(points: LngLatLike[]): LngLatArray[] {
     return points.map((point) => GeometryUtils.point2array(point));
   };
 
@@ -71,16 +73,17 @@ export class GeometryUtils {
    * 获取平面多边形中心点坐标
    *
    * @since 0.0.5
-   * @param points                          平面多边形范围坐标点集合
-   * @returns {TGeometryUtilsLngLatArray}   平面多边形中心点坐标
+   * @param points            平面多边形范围坐标点集合
+   * @returns {LngLatArray}   平面多边形中心点坐标
    */
-  public static planeCenter(points: TGeometryUtilsLngLatLike[]): TGeometryUtilsLngLatArray {
-    const [longitudes, latitudes] = GeometryUtils.points2array(points).reduce((previous, point) => {
-      previous[0].push(point[0]);
-      previous[1].push(point[1]);
+  public static planeCenter(points: LngLatLike[]): LngLatArray {
+    const [longitudes, latitudes] = GeometryUtils.points2array(points)
+      .reduce((previous: [number[], number[]], point) => {
+        previous[0].push(point[0]);
+        previous[1].push(point[1]);
 
-      return previous;
-    }, [[], []] as [number[], number[]]);
+        return previous;
+      }, [[], []]);
 
     longitudes.sort((a, b) => a - b);
     latitudes.sort((a, b) => a - b);
@@ -98,7 +101,7 @@ export class GeometryUtils {
    * @param points        多边形范围坐标点集合
    * @returns {number}    多边形面积
    */
-  public static area(points: TGeometryUtilsLngLatLike[]): number {
+  public static area(points: LngLatLike[]): number {
     const area = GeometryUtils.planeArea(points);
 
     if (area > GeometryUtils.PlaneAreaThreshold) {
@@ -115,7 +118,7 @@ export class GeometryUtils {
    * @param points        平面多边形范围坐标点集合
    * @returns {number}    平面多边形面积
    */
-  public static planeArea(points: TGeometryUtilsLngLatLike[]): number {
+  public static planeArea(points: LngLatLike[]): number {
     if (points.length < 3) {
       return 0;
     }
@@ -143,7 +146,7 @@ export class GeometryUtils {
    * @param points        球面多边形范围坐标点集合
    * @returns {number}    球面多边形面积
    */
-  public static sphereArea(points: TGeometryUtilsLngLatLike[]): number {
+  public static sphereArea(points: LngLatLike[]): number {
     if (points.length < 3) {
       return 0;
     }
@@ -183,7 +186,7 @@ export class GeometryUtils {
    * @param p3            点3数组型坐标点
    * @returns {number}    三坐标点之间的角度
    */
-  public static angle(p1: TGeometryUtilsLngLatArray, p2: TGeometryUtilsLngLatArray, p3: TGeometryUtilsLngLatArray): number {
+  public static angle(p1: LngLatArray, p2: LngLatArray, p3: LngLatArray): number {
     const bearing21 = GeometryUtils.bearing(p2, p1);
     const bearing23 = GeometryUtils.bearing(p2, p3);
 
@@ -200,7 +203,7 @@ export class GeometryUtils {
    * @param to            终止点数组型坐标点
    * @returns {number}    两坐标点之间的方向
    */
-  public static bearing(from: TGeometryUtilsLngLatArray, to: TGeometryUtilsLngLatArray): number {
+  public static bearing(from: LngLatArray, to: LngLatArray): number {
     const longitude1 = from[0] * GeometryUtils.DegreeRadians;
     const latitude1 = from[1] * GeometryUtils.DegreeRadians;
     const longitude2 = to[0] * GeometryUtils.DegreeRadians;
@@ -222,7 +225,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    亩
    */
-  public static sm2mu(sm: number, fixed?: number | null): number {
+  public static sm2mu(sm: number, fixed?: number): number {
     return GeometryUtils.decimal(sm * 0.0015);
   };
 
@@ -234,7 +237,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    平方米
    */
-  public static mu2sm(mu: number, fixed?: number | null): number {
+  public static mu2sm(mu: number, fixed?: number): number {
     return GeometryUtils.decimal(mu / 0.0015);
   };
 
@@ -246,7 +249,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    公顷
    */
-  public static sm2ha(sm: number, fixed?: number | null): number {
+  public static sm2ha(sm: number, fixed?: number): number {
     return GeometryUtils.decimal(sm * 0.0001);
   };
 
@@ -258,7 +261,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    平方米
    */
-  public static ha2sm(ha: number, fixed?: number | null): number {
+  public static ha2sm(ha: number, fixed?: number): number {
     return GeometryUtils.decimal(ha * 10000);
   };
 
@@ -270,7 +273,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    公顷
    */
-  public static mu2ha(mu: number, fixed?: number | null): number {
+  public static mu2ha(mu: number, fixed?: number): number {
     return GeometryUtils.decimal(mu / 15);
   };
 
@@ -282,7 +285,7 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    亩
    */
-  public static ha2mu(ha: number, fixed?: number | null): number {
+  public static ha2mu(ha: number, fixed?: number): number {
     return GeometryUtils.decimal(ha * 15);
   };
 
@@ -294,38 +297,8 @@ export class GeometryUtils {
    * @param [fixed]       最大小数位数
    * @returns {number}    转换结果
    */
-  public static decimal(num: number, fixed?: number | null): number {
+  public static decimal(num: number, fixed?: number): number {
     return (fixed == null || fixed < 0) ? num : Number(num.toFixed(fixed));
   };
 
 }
-
-/**
- * 对象型经纬度坐标点
- *
- * @since 0.0.5
- */
-export interface IGeometryUtilsLngLat {
-  /**
-   * 经度
-   */
-  longitude: number;
-  /**
-   * 纬度
-   */
-  latitude: number;
-}
-
-/**
- * 数组型经纬度坐标点
- *
- * @since 0.0.5
- */
-export type TGeometryUtilsLngLatArray = [longitude: number, latitude: number];
-
-/**
- * 联合型经纬度坐标点
- *
- * @since 0.0.5
- */
-export type TGeometryUtilsLngLatLike = IGeometryUtilsLngLat | TGeometryUtilsLngLatArray;

@@ -1,3 +1,3 @@
-export * from "./string";
-export * from "./array";
-export * from "./geometry";
+export * as string from "./string";
+export * as array from "./array";
+export * as geometry from "./geometry";

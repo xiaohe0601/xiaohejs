@@ -1,4 +1,5 @@
-import { IObjectRecord, ITree2FlatOptions } from "../types";
+import { IObjectRecord } from "../types/common";
+import { ITree2FlatOptions } from "../types/array";
 
 /**
  * 树形结构数组转扁平数组-默认配置项
