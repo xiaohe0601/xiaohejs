@@ -3,30 +3,43 @@
   "version": "0.1.0",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
-    "build": "tsc -p tsconfig.esm.json"
+    "build:webpack": "webpack build --mode production",
+    "build:types": "tsc --emitDeclarationOnly",
+    "release": "pnpm run build:webpack && pnpm run build:types && npm publish"
   },
   "devDependencies": {
-    "tslib": "^2.6.0",
-    "typescript": "^5.1.6"
+    "@babel/core": "^7.22.6",
+    "@babel/plugin-transform-runtime": "^7.22.6",
+    "@babel/preset-env": "^7.22.6",
+    "@babel/preset-typescript": "^7.22.5",
+    "@types/node": "^20.3.3",
+    "@types/webpack": "^5.28.1",
+    "babel-loader": "^9.1.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
   },
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
   "files": [
     "lib/**/*"
   ],
   "sideEffects": false,
-  "license": "MIT",
   "homepage": "https://xiaohejs.myhdg.top",
   "bugs": "https://github.com/xiaohe0601/xiaohejs/issues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaohe0601/xiaohejs.git"
+  },
   "author": {
     "name": "小何同学 (xiaohe0601)",
     "email": "HeDianGeng0601@outlook.com",
     "url": "https://github.com/xiaohe0601"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xiaohe0601/xiaohejs.git"
   },
   "keywords": [
     "typescript",

@@ -65,7 +65,7 @@ export function sphereArea(points: LngLatLike[]): number {
   if (excess > 420.0) {
     return ((formats.length * 360.0 - angleValue) - offset) * multiple;
   } else if (excess > 300.0 && excess < 420.0) {
-    return Math.abs(360.0 - excess) * multiple
+    return Math.abs(360.0 - excess) * multiple;
   }
 
   return excess * multiple;

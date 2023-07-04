@@ -1,21 +1,24 @@
 //  https://www.tslang.cn/docs/handbook/compiler-options.html
 
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES5",
     "module": "ESNext",
-    "lib": ["ESNext"],
     "moduleResolution": "NodeNext",
+    "lib": ["ESNext"],
     "strict": true,
     "esModuleInterop": true,
-    "importHelpers": true,
     "skipLibCheck": true,
     "declaration": true,
     "sourceMap": false,
     "rootDir": "./src",
     "outDir": "./lib/esm",
     "declarationDir": "./lib/esm"
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "UMD"
+    }
   },
   "include": ["./src/**/*.ts", "./src/**/*.d.ts"],
   "exclude": ["node_modules"]
