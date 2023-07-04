@@ -4,7 +4,7 @@
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack build",
+    "build": "webpack build --mode production",
     "types": "tsc --emitDeclarationOnly",
     "build:types": "pnpm run build && pnpm run types",
     "release": "pnpm run build@types && npm publish"

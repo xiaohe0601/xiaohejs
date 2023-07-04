@@ -4,8 +4,12 @@ import * as path from "path";
 import { merge } from "webpack-merge";
 
 const CommonConfig: webpack.Configuration = {
-  mode: "production",
   devtool: "source-map",
+  entry: path.resolve(__dirname, "src", "index.ts"),
+  output: {
+    clean: true,
+    filename: "index.js"
+  },
   module: {
     rules: [{
       test: /\.ts?$/,
@@ -15,28 +19,24 @@ const CommonConfig: webpack.Configuration = {
   },
   resolve: {
     extensions: [".ts"]
-  },
-  entry: "./src/index.ts",
-  output: {
-    filename: "index.js",
-    clean: true
   }
 };
 
 const CjsConfig = merge(CommonConfig, {
   output: {
-    path: path.resolve(__dirname, "lib/cjs"),
+    path: path.resolve(__dirname, "lib", "cjs"),
     library: {
       name: "xiaohejs",
-      type: "umd"
+      type: "umd",
+      umdNamedDefine: true
     }
   }
 });
 
 const EsmConfig = merge(CommonConfig, {
   output: {
+    path: path.resolve(__dirname, "lib", "esm"),
     module: true,
-    path: path.resolve(__dirname, "lib/esm"),
     library: {
       type: "module"
     }
