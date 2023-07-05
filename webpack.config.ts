@@ -25,7 +25,7 @@ const CjsConfig = merge(CommonConfig, {
   output: {
     path: path.resolve(__dirname, "lib", "cjs"),
     library: {
-      name: "xiaohejs",
+      name: "artesh",
       type: "umd",
       umdNamedDefine: true
     }
