@@ -1,3 +1,9 @@
-export * as string from "./string";
-export * as array from "./array";
-export * as geometry from "./geometry";
+import * as string from "./string";
+import * as array from "./array";
+import * as geometry from "./geometry";
+
+export default {
+  string,
+  array,
+  geometry
+};
