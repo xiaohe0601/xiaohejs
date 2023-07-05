@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "build:webpack": "webpack build --mode production",
