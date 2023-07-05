@@ -32,17 +32,4 @@ const CjsConfig = merge(CommonConfig, {
   }
 });
 
-const EsmConfig = merge(CommonConfig, {
-  output: {
-    path: path.resolve(__dirname, "lib", "esm"),
-    module: true,
-    library: {
-      type: "module"
-    }
-  },
-  experiments: {
-    outputModule: true
-  }
-});
-
-export default [CjsConfig, EsmConfig];
+export default [CjsConfig];

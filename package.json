@@ -4,8 +4,12 @@
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "build:webpack": "webpack build --mode production",
-    "build:types": "tsc --emitDeclarationOnly",
-    "release": "pnpm run build:webpack && pnpm run build:types && npm publish"
+    "build:tsc": "tsc --project tsconfig.json",
+    "build": "pnpm run build:webpack && pnpm run build:tsc",
+    "release": "pnpm run build && npm publish"
+  },
+  "dependencies": {
+    "tslib": "^2.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.6",
