@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "build:rollup": "rollup --config rollup.config.ts --configPlugin typescript",
@@ -24,7 +24,6 @@
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
-  "type": "module",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
