@@ -20,6 +20,10 @@ lib
 dist
 node_modules
 
+# Tests
+coverage
+html
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
