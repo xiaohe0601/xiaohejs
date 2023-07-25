@@ -1,4 +1,4 @@
-import { NullableString } from "../common";
+import type { NullableString } from "../common";
 
 /**
  * 转换Url相对路径-缺省值

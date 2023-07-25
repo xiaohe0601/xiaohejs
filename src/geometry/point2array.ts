@@ -1,4 +1,4 @@
-import { LngLatArray, LngLatLike } from "../types/geometry";
+import type { LngLatArray, LngLatLike } from "../types/geometry";
 
 /**
  * 联合型坐标点转数组型坐标点

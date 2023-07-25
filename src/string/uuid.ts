@@ -1,4 +1,4 @@
-import { IUuidOptions } from "../types/string";
+import type { IUuidOptions } from "../types/string";
 
 /**
  * 生成uuid-默认配置项

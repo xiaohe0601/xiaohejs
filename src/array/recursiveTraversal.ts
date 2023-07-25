@@ -1,5 +1,5 @@
-import { IObjectRecord } from "../types/common";
-import { IRecursiveTraversalOptions } from "../types/array";
+import type { IObjectRecord } from "../types/common";
+import type { IRecursiveTraversalOptions } from "../types/array";
 
 /**
  * 递归遍历树形结构数组-默认配置项

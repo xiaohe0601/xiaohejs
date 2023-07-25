@@ -1,4 +1,4 @@
-import { NullableNumber } from "../common";
+import type { NullableNumber } from "../common";
 
 /**
  * 格式化文件大小-配置项

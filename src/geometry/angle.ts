@@ -1,4 +1,4 @@
-import { LngLatArray } from "../types/geometry";
+import type { LngLatArray } from "../types/geometry";
 
 import { DegreeRadians, RadianDegrees } from "./config";
 

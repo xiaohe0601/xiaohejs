@@ -1,5 +1,5 @@
-import { NullableString } from "../types/common";
-import { IConvertUrlConfig, IConvertUrlOptions } from "../types/string";
+import type { NullableString } from "../types/common";
+import type { IConvertUrlConfig, IConvertUrlOptions } from "../types/string";
 
 /**
  * 转换Url相对路径-默认缺省值
@@ -34,8 +34,8 @@ export function convertUrl(value: NullableString, options?: IConvertUrlOptions):
   const { base = ConvertUrlConfig.base, prefix } = Object.assign({}, DefaultConvertUrlOptions, options);
 
   if (value == null || value.length <= 0
-    || base == null || value.startsWith(base)
-    || ConvertUrlConfig.excludes.findIndex((it) => value.startsWith(it)) >= 0) {
+      || base == null || value.startsWith(base)
+      || ConvertUrlConfig.excludes.findIndex((it) => value.startsWith(it)) >= 0) {
     return value;
   }
 

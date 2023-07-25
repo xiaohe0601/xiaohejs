@@ -1,4 +1,4 @@
-import { IFormatFileSizeOptions } from "../types/string";
+import type { IFormatFileSizeOptions } from "../types/string";
 
 /**
  * 格式化文件大小-默认配置项

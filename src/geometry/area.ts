@@ -1,4 +1,4 @@
-import { LngLatLike } from "../types/geometry";
+import type { LngLatLike } from "../types/geometry";
 
 import { DegreeMetres, DegreeRadians, EarthRadiusMetres, PlaneAreaThreshold } from "./config";
 

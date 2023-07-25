@@ -1,6 +1,6 @@
-import { NullableString } from "../types/common";
+import type { NullableString } from "../types/common";
 
-import { ISplitOptions } from "../types/string";
+import type { ISplitOptions } from "../types/string";
 
 /**
  * 分割字符串-默认配置项

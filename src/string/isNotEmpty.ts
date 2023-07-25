@@ -1,4 +1,4 @@
-import { NullableString } from "../types/common";
+import type { NullableString } from "../types/common";
 
 import { isEmpty } from "./isEmpty";
 
