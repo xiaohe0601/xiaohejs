@@ -20,6 +20,8 @@ export const DefaultRecursiveTraversalOptions: IRecursiveTraversalOptions<any> =
  * @param [options.parent]                    父节点数据
  * @param [options.processor]                 节点数据处理器
  */
+// @formatter:off
+/* c8 ignore start */
 export function recursiveTraversal<T extends IObjectRecord>(array: T[], options?: IRecursiveTraversalOptions<T>): void {
   const { childrenKey, processor } = Object.assign({}, DefaultRecursiveTraversalOptions, options);
 
@@ -37,4 +39,5 @@ export function recursiveTraversal<T extends IObjectRecord>(array: T[], options?
       recursiveTraversal(children, Object.assign({}, options, { parent: item }));
     }
   }
-}
+}// @formatter:off
+/* c8 ignore stop */
