@@ -74,10 +74,10 @@ export function ha2mu(ha: number, fixed?: number): number {
  * 转换小数位数
  *
  * @since 0.0.5
- * @param num           数字
+ * @param x             数字
  * @param [fixed]       最大小数位数
  * @returns {number}    转换结果
  */
-export function decimal(num: number, fixed?: number): number {
-  return (fixed == null || fixed < 0) ? num : Number(num.toFixed(fixed));
+export function decimal(x: number, fixed?: number): number {
+  return (fixed == null || fixed < 0) ? x : Number(x.toFixed(fixed));
 }

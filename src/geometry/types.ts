@@ -27,3 +27,5 @@ export type LngLatArray = [longitude: number, latitude: number];
  * @since 0.0.5
  */
 export type LngLatLike = ILngLat | LngLatArray;
+
+export default {};

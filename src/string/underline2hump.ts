@@ -1,4 +1,4 @@
-import type { NullableString } from "../types/common";
+import type { NullableString } from "../types";
 
 /**
  * 下划线风格转驼峰风格字符串

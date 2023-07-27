@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { uuid } from "../../src/string";
+import { uuid } from "../../src";
 
 describe("StringUtils.uuid", () => {
   test("不指定参数", () => {
@@ -20,6 +20,6 @@ describe("StringUtils.uuid", () => {
   });
 
   test("指定无效的字符串", () => {
-    expect.soft(uuid(10, { characters: null })).toBe("");
+    expect.soft(uuid(10, { characters: undefined })).toBe("");
   });
 });

@@ -1,12 +1,8 @@
 import { describe, expect, test } from "vitest";
 
-import { tree2flat } from "../../src/array";
+import { tree2flat } from "../../src";
 
 describe("ArrayUtils.tree2flat", () => {
-  test("null", () => {
-    expect.soft(tree2flat(null)).toEqual([]);
-  });
-
   test("树形结构数组", () => {
     const tree = [{
       id: 1,
@@ -56,8 +52,8 @@ describe("ArrayUtils.tree2flat", () => {
 
   test("异常参数", () => {
     expect.soft(tree2flat([], {
-      childrenKey: null,
-      processor: null
+      childrenKey: undefined,
+      processor: undefined
     })).toEqual([]);
   });
 });

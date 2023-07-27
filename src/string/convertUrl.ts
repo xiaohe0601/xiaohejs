@@ -1,5 +1,36 @@
-import type { NullableString } from "../types/common";
-import type { IConvertUrlConfig, IConvertUrlOptions } from "../types/string";
+import type { NullableString } from "../types";
+
+/**
+ * 转换Url相对路径-缺省值
+ *
+ * @since 0.1.0
+ */
+export interface IConvertUrlConfig {
+  /**
+   * Url基地址
+   */
+  base: NullableString;
+  /**
+   * 例外的Url前缀
+   */
+  excludes: string[];
+}
+
+/**
+ * 转换Url相对路径-配置项
+ *
+ * @since 0.0.6
+ */
+export interface IConvertUrlOptions {
+  /**
+   * Url基地址
+   */
+  readonly base?: NullableString;
+  /**
+   * Url额外前缀
+   */
+  readonly prefix?: NullableString;
+}
 
 /**
  * 转换Url相对路径-默认缺省值

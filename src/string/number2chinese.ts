@@ -1,4 +1,4 @@
-import type { NumberLike } from "../types/common";
+import type { NumberLike } from "../types";
 
 /**
  * 阿拉伯数字转为中文数字 (仅支持正整数)

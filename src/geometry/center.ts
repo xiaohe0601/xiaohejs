@@ -1,4 +1,4 @@
-import type { LngLatArray, LngLatLike } from "../types/geometry";
+import type { LngLatArray, LngLatLike } from "./types";
 
 import { points2array } from "./point2array";
 

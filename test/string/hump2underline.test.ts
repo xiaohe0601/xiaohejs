@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { hump2underline } from "../../src/string";
+import { hump2underline } from "../../src";
 
 describe("StringUtils.hump2underline", () => {
   test("null", () => {

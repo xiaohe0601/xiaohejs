@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { number2chinese } from "../../src/string";
+import { number2chinese } from "../../src";
 
 describe("StringUtils.number2chinese", () => {
   test("数字0", () => {

@@ -1,4 +1,4 @@
-import type { NullableString } from "../types/common";
+import type { NullableString } from "../types";
 
 /**
  * 是否为空字符串

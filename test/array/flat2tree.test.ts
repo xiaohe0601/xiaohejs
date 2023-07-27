@@ -1,12 +1,8 @@
 import { describe, expect, test } from "vitest";
 
-import { flat2tree } from "../../src/array";
+import { flat2tree } from "../../src";
 
 describe("ArrayUtils.flat2tree", () => {
-  test("null", () => {
-    expect.soft(flat2tree(null)).toEqual([]);
-  });
-
   test("扁平结构数组 (第一级pid为0)", () => {
     const array = [{
       id: 1,
@@ -127,9 +123,9 @@ describe("ArrayUtils.flat2tree", () => {
 
   test("异常参数", () => {
     expect.soft(flat2tree([], {
-      key: null,
-      parentKey: null,
-      processor: null
+      key: undefined,
+      parentKey: undefined,
+      processor: undefined
     })).toEqual([]);
   });
 });

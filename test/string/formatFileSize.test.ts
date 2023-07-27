@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { formatFileSize } from "../../src/string";
+import { formatFileSize } from "../../src";
 
 describe("StringUtils.formatFileSize", () => {
   test("10000b", () => {
@@ -8,7 +8,7 @@ describe("StringUtils.formatFileSize", () => {
   });
 
   test("10000b (小写单位)", () => {
-    expect.soft(formatFileSize(10000, { lowercase: null })).toBe("9.765625kb");
+    expect.soft(formatFileSize(10000, { lowercase: undefined })).toBe("9.765625kb");
   });
 
   test("10000b (大写单位)", () => {

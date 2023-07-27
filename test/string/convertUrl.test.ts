@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test } from "vitest";
 
-import { convertUrl, ConvertUrlConfig } from "../../src/string";
+import { convertUrl, ConvertUrlConfig } from "../../src";
 
 describe("StringUtils.convertUrl", () => {
   beforeEach(() => {

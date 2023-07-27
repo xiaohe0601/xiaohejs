@@ -11,3 +11,5 @@ export interface IObjectRecord {
 export interface IObjectMap<T> {
   [key: string]: T;
 }
+
+export default {};

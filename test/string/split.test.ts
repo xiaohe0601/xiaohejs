@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { split } from "../../src/string";
+import { split } from "../../src";
 
 describe("StringUtils.split", () => {
   test("null", () => {
