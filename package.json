@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "build:rollup": "rollup --config rollup.config.ts --configPlugin typescript",

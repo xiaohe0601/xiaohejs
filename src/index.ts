@@ -77,6 +77,10 @@ const xiaohejs = {
 export {
   xiaohejs as default,
 
+  string,
+  array,
+  geometry,
+
   isEmptyString,
   isNotEmptyString,
   DefaultSplitOptions,
