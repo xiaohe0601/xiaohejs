@@ -1,6 +1,6 @@
 {
   "name": "xiaohejs",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "🎈 小何同学的JavaScript工具箱",
   "scripts": {
     "build:rollup": "rollup --config rollup.config.ts --configPlugin typescript",
@@ -32,11 +32,11 @@
   },
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
-  "types": "./lib/types/index.d.ts",
+  "types": "./lib/esm/index.d.ts",
   "exports": {
     "import": "./lib/esm/index.js",
     "require": "./lib/cjs/index.js",
-    "types": "./lib/types/index.d.ts"
+    "types": "./lib/esm/index.d.ts"
   },
   "files": [
     "lib/**/*.*"
