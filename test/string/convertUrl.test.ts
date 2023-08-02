@@ -4,7 +4,7 @@ import { convertUrl, ConvertUrlConfig } from "../../src";
 
 describe("StringUtils.convertUrl", () => {
   beforeEach(() => {
-    ConvertUrlConfig.base = "https://xiaohejs.myhdg.top";
+    ConvertUrlConfig.base = "https://xiaohejs.xiaohe.ink";
   });
 
   test("null", () => {
@@ -12,18 +12,18 @@ describe("StringUtils.convertUrl", () => {
   });
 
   test("以斜杠开头的URL", () => {
-    expect.soft(convertUrl("/xiaohe")).toBe("https://xiaohejs.myhdg.top/xiaohe");
+    expect.soft(convertUrl("/xiaohe")).toBe("https://xiaohejs.xiaohe.ink/xiaohe");
   });
 
   test("无斜杠开头的URL", () => {
-    expect.soft(convertUrl("xiaohe")).toBe("https://xiaohejs.myhdg.top/xiaohe");
+    expect.soft(convertUrl("xiaohe")).toBe("https://xiaohejs.xiaohe.ink/xiaohe");
   });
 
   test("带协议头的URL", () => {
-    expect.soft(convertUrl("https://xiaohejs.myhdg.top/xiaohe")).toBe("https://xiaohejs.myhdg.top/xiaohe");
+    expect.soft(convertUrl("https://xiaohejs.xiaohe.ink/xiaohe")).toBe("https://xiaohejs.xiaohe.ink/xiaohe");
   });
 
   test("额外的前缀", () => {
-    expect.soft(convertUrl("/xiaohe", { prefix: "target:" })).toBe("target:https://xiaohejs.myhdg.top/xiaohe");
+    expect.soft(convertUrl("/xiaohe", { prefix: "target:" })).toBe("target:https://xiaohejs.xiaohe.ink/xiaohe");
   });
 });

@@ -35,15 +35,15 @@
 
 ### 🛩️ 在线文档
 
-- [文档首页](https://xiaohejs.myhdg.top)
+- [文档首页](https://xiaohejs.xiaohe.ink)
 
 - 文档首页(国内镜像)：暂未开通
 
-- [快速上手](https://xiaohejs.myhdg.top/guide/getting-started.html)
+- [快速上手](https://xiaohejs.xiaohe.ink/guide/getting-started.html)
 
-- [工具列表](https://xiaohejs.myhdg.top/utils)
+- [工具列表](https://xiaohejs.xiaohe.ink/utils)
 
-- [小何同学](https://xiaohejs.myhdg.top/about/xiaohe.html)
+- [小何同学](https://xiaohejs.xiaohe.ink/about/xiaohe.html)
 
 ### 🐶 讨论交流
 
