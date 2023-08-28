@@ -1,6 +1,8 @@
-export type NullableBoolean = boolean | null;
-export type NullableNumber = number | null;
-export type NullableString = string | null;
+export type NullableObject<T> = T | null;
+
+export type NullableNumber = NullableObject<number>;
+export type NullableString = NullableObject<string>;
+export type NullableBoolean = NullableObject<boolean>;
 
 export type NumberLike = number | `${number}`;
 
