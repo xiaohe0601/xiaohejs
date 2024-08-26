@@ -1,6 +1,6 @@
 <div align="center">
   <h1>xiaohejs</h1>
-  <span>🎈 小何同学的JavaScript工具箱</span>
+  <span>🎈 小何的JavaScript工具箱</span>
 </div>
 
 <br>
@@ -11,7 +11,7 @@
 ![GitHub release](https://img.shields.io/github/v/release/xiaohe0601/xiaohejs?logo=GitHub&style=flat-square)
 ![GitHub license](https://img.shields.io/github/license/xiaohe0601/xiaohejs?style=flat-square)
 
-小何同学 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
+小何 / [github@xiaohe0601](https://github.com/xiaohe0601) / [gitee@xiaohe0601](https://gitee.com/xiaohe0601)
 
 ### 🎉 特性
 
@@ -43,13 +43,13 @@
 
 - [工具列表](https://xiaohejs.xiaohe.ink/utils)
 
-- [小何同学](https://xiaohejs.xiaohe.ink/about/xiaohe.html)
+- [关于小何](https://xiaohejs.xiaohe.ink/about/xiaohe.html)
 
 ### 🐶 讨论交流
 
 - ❓：若有疑问或BUG反馈，可提交[issues](https://github.com/xiaohe0601/xiaohejs/issues)
 
-- 📫：[HeDianGeng0601@outlook.com](mailto:HeDianGeng0601@outlook.com)
+- 📫：[xiaohe0601@outlook.com](mailto:xiaohe0601@outlook.com)
 
 - 🐧：暂未开通
 

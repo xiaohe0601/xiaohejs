@@ -1,7 +1,7 @@
 {
   "name": "xiaohejs",
   "version": "0.1.10",
-  "description": "🎈 小何同学的JavaScript工具箱",
+  "description": "🎈 小何的JavaScript工具箱",
   "scripts": {
     "build:rollup": "rollup --config rollup.config.ts --configPlugin typescript",
     "release": "pnpm run build:rollup && npm publish",
@@ -56,8 +56,8 @@
     "url": "https://github.com/xiaohe0601/xiaohejs.git"
   },
   "author": {
-    "name": "小何同学 (xiaohe0601)",
-    "email": "HeDianGeng0601@outlook.com",
+    "name": "小何 (xiaohe0601)",
+    "email": "xiaohe0601@outlook.com",
     "url": "https://github.com/xiaohe0601"
   },
   "keywords": [
